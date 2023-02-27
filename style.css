@@ -8,7 +8,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
+footer, header, hgroup, menu, nav, summary,
 time, mark, audio, video {
     margin:0;
     padding:0;
@@ -25,7 +25,6 @@ time, mark, audio, video {
 }
 
 .inner{
-    
     margin-left: 36px;
     display: flex;
 }
@@ -45,9 +44,15 @@ time, mark, audio, video {
     padding-bottom: 20px;
 }
 
+.HeaderContainer>*:last-child {
+    display: inline-flex;
+}
+
 .HeaderLists{
+    align-items: center;
     display: flex;
-    text-align: right;
+    justify-content: space-between;
+ 
 }
 
 .headerLink{
@@ -59,11 +64,10 @@ time, mark, audio, video {
     text-decoration: none;
     font-weight: 700;
     word-break: break-all;
-    width: 50%;
     display: flex;
-    text-align: right;
-    padding-inline-start: 120px;
-    justify-content: space-between;
+     white-space:nowrap;
+     margin-right: 45px;
+     
 }
 
 
@@ -72,14 +76,21 @@ time, mark, audio, video {
     display: block;
     font-weight: 700;
     text-align: center;
-    font-size: 10px
+    
 }
 
+.HeaderList span:first-child {
+    font-family: 'Lato',sans-serif;
+    font-size: 14px;
+}
 
+.HeaderList span:last-child {
+     font-size: 10px;
+}
 
 .HeaderLogo{
     height: 20px;
-    width: 185px;
+    width: auto;
 }
 
 .headerLink_button{
@@ -90,9 +101,11 @@ time, mark, audio, video {
     font-size: 12px;
     padding: 0px 20px;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    
+    white-space:nowrap;
+    height: 40px;
 }
 
 nav ul li{
@@ -105,13 +118,10 @@ nav ul li{
 .topimage{
     background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     padding-top: 100px;
-    padding-bottom: 28px;
-    display: block;
-    max-width: 1286px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-bottom: 28px
     
 }
 
@@ -126,8 +136,15 @@ nav ul li{
     width: fit-content;
 }
 .FirstViewContents{
-   
     padding: 0 50px;
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.FirstViewContent{
     margin-bottom: 70px;
 }
 
@@ -141,7 +158,7 @@ nav ul li{
     margin-right: 10px;
 }
 
-.firstViewItemimg img :last-of-type {
+.firstViewItemimg:last-of-type {
     margin-right: 0;
 }
 
@@ -167,7 +184,6 @@ table {
     border-collapse:collapse;
     border-spacing:0;
 }
-
 
 
 .FirstViewCpation{
@@ -215,16 +231,23 @@ table {
 
 }
 
-
 .AboutWrapper{
-    background-color: #f79214;
-    padding: 44px 0px;
-    display: flex;
-    max-width: 1286px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 50px;
     padding-right: 50px;
-    color: #fff;
+    position: relative;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+.About{
+    background-color: #f79214;
+    padding: 44px 0px;
+
 }
 
 .AboutVideo{
@@ -235,13 +258,15 @@ table {
 .About_title{
     display: flex;
     flex-direction: column;
-    margin-bottom: 0px;
     width: 100%;
     align-items: flex-start;
+    margin-bottom: 0;
     margin-left: 32px;
-    margin-top: 10px;
+    color: #fff;
 }
+
 .About_title h2 {
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     color: #fff;
     font-size: 38px;
     width: 100%;
@@ -261,4 +286,10 @@ table {
     font-weight: 700;
     color: #fff;
     line-height: 26px;
+}
+
+
+.HeaderList:hover , .FirstViewButtons:hover{
+    opacity: .8;
+    transition: .2s;
 }
