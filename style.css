@@ -167,11 +167,11 @@ nav ul li{
     vertical-align: middle;
 }
 
-.firstViewItem img{
+.FirstViewItem img{
     margin-right: 10px;
 }
 
-.firstViewItemimg:last-of-type {
+.FirstViewItem img:last-of-type {
     margin-right: 0;
 }
 
