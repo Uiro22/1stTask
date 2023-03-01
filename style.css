@@ -24,9 +24,24 @@ time, mark, audio, video {
     -webkit-text-size-adjust: 100%;
 }
 
-.inner{
+.HeaderLayout{
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.HeaderContainer{
     margin-left: 36px;
     display: flex;
+    justify-content: space-between;
+    margin: 0 36px;
+    max-width: 100%;
+    position: relative;
+}
+
+.HeaderContainer>*:last-child {
+    display: inline-flex;
 }
 
 
@@ -38,16 +53,6 @@ time, mark, audio, video {
 }
 
 
-.headerlayout{
-    position: absolute;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.HeaderContainer>*:last-child {
-    display: inline-flex;
-}
-
 .HeaderLists{
     align-items: center;
     display: flex;
@@ -55,7 +60,7 @@ time, mark, audio, video {
  
 }
 
-.headerLink{
+.HeaderLink{
      color:#333;
 }
 
@@ -67,7 +72,6 @@ time, mark, audio, video {
     display: flex;
      white-space:nowrap;
      margin-right: 45px;
-     
 }
 
 
@@ -92,8 +96,15 @@ time, mark, audio, video {
     height: 20px;
     width: auto;
 }
+.HeaderLogo a{
+    transition: opacity .2s;
+}
 
-.headerLink_button{
+.HeaderNav{
+    display: inline-flex;
+}
+
+.HeaderLink_Button{
     color: #fff;
     background-color: #f79214;
     border-radius: 38px;
@@ -115,8 +126,8 @@ nav ul li{
     
 }
 
-.topimage{
-    background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+.Topimage{
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -144,11 +155,13 @@ nav ul li{
     margin-right: auto;
     position: relative;
 }
+
+
 .FirstViewContent{
     margin-bottom: 70px;
 }
 
-.firstViewItem{
+.FirstViewItem{
     display: flex;
     margin-bottom: 25px;
     vertical-align: middle;
@@ -255,7 +268,7 @@ table {
     object-fit: contain;
 }
 
-.About_title{
+.About_Title{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -265,7 +278,7 @@ table {
     color: #fff;
 }
 
-.About_title h2 {
+.About_Title h2 {
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     color: #fff;
     font-size: 38px;
@@ -274,7 +287,7 @@ table {
     margin-bottom: 10px;
 }
 
-.About_title p {
+.About_Title p {
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
