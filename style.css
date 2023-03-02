@@ -24,6 +24,130 @@ time, mark, audio, video {
     -webkit-text-size-adjust: 100%;
 }
 
+header{
+    display: block;
+}
+
+/*PC縮小版*/
+@media screen and (max-width: 768px) {
+    .HeaderLayout {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderLayout {
+        background-color: #fff;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderLayout:hover {
+        position: fixed !important;
+    }
+}
+
+.HeaderNavHamburger {
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 21px;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger_line:first-child {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger_line {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        transform: translate(0, -50%);
+        border-radius: 10px;
+        transition: top .2s, transform .2s, opacity .3s;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger_line:last-child {
+        top: 100%;
+    }
+}
+    
+@media screen and (max-width:1080px){
+    .HeaderNavHamburger_line{
+        position:absolute;
+        top:50%;
+        display: block;
+        width:100%;
+        height:3px;
+        background-color:#333;
+        transform:translate(0,-50%);
+        border-radius:10px;
+        transition:top .2s,transform .2s,opacity .3s}
+    }
+
+
+
+@media screen and (max-width:1080px){
+    .is-active .HeaderNavHamburger_line{
+        will-change:top;transform:translate(20px,-50%);
+        opacity:0}
+    }
+    
+@media screen and (max-width:1080px){
+    .is-active .HeaderNavHamburger_line:first-child{
+        top:50%;transform:translate(0,-50%) rotate(45deg);opacity:1}
+    }
+
+@media screen and (max-width:1080px){
+    .is-active .HeaderNavHamburger_line:last-child{
+        top:50%;transform:translate(0,-50%) rotate(-45deg);opacity:1}
+    }
+
+
+@media screen and (max-width: 1080px) {
+    .HeaderLists {
+        overflow-y: scroll;
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 100%;
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 75px;
+        transition: transform .5s;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, .8);
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    main {
+        padding-top: 60px;
+    }
+}
+
 .HeaderLayout{
     width: 100%;
     position: absolute;
@@ -44,6 +168,12 @@ time, mark, audio, video {
     display: inline-flex;
 }
 
+@media screen and (max-width: 767px) {
+    .HeaderContainer {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+}
 
 .body {
     font-family: sans-serif;
@@ -58,6 +188,37 @@ time, mark, audio, video {
     display: flex;
     justify-content: space-between;
  
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderLists {
+        overflow-y: scroll;
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 100%;
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 75px;
+        transition: transform .5s;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, .8);
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .HeaderList:hover {
+        opacity: .8;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderList {
+        transition: opacity .2s;
+    }
 }
 
 .HeaderLink{
@@ -92,12 +253,54 @@ time, mark, audio, video {
      font-size: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    .HeaderList{
+        transition: opacity .2s;
+    }
+}
+
 .HeaderLogo{
     height: 20px;
     width: auto;
+    display:block;
 }
-.HeaderLogo a{
-    transition: opacity .2s;
+
+@media screen and (min-width: 768px) {
+    .HeaderLogo:hover {
+        opacity: .8;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderLogo {
+        transition: opacity .2s;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .HeaderLogo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderLogo_img__sp {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderLogo_img__sp{
+        display: block;
+    }
+}
+
+
+ .HeaderLogo_img__sp{
+    display: none;
+    height: 16px;
+    width: auto;
 }
 
 .HeaderNav{
@@ -119,21 +322,58 @@ time, mark, audio, video {
     height: 40px;
 }
 
+@media screen and (min-width: 768px) {
+    .HeaderLink_Button:hover {
+        opacity: .8;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderLink_Button {
+        transition: opacity .2s;
+    }
+}
+
 nav ul li{
     list-style:none;
-    display: inline-block;
+    display: block;
     text-align: left;
     
+}
+
+main section {
+    display: block;
 }
 
 .Topimage{
     background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     padding-top: 100px;
     padding-bottom: 28px
-    
+}
+
+@media screen and (max-width: 767px) {
+    .Topimage {
+        background-image: none;
+        padding-top: 0;
+        padding-bottom: 35px;
+    }
+}
+
+.Topimage__main-image{
+    width: 100%;
+    position: relative;
+}
+
+.Topimage__main-image_sp {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .Topimage__main-image_sp {
+        display: block;
+    }
 }
 
 .FirstView{
@@ -144,8 +384,31 @@ nav ul li{
     line-height: 54px;
     margin-bottom: 15px;
     text-align: center;
-    width: fit-content;
 }
+
+.FirstViewItem img:nth-of-type(2){
+    width: 40%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .FirstView{
+        font-size: 25px;
+        line-height: 36px;
+        margin-left: calc(((100vw - 100%)/2)*-1);
+        margin-right: calc(((100vw - 100%)/2)*-1);
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .FirstViewItem img {
+        width: 27.5%;
+    }
+}
+
+
 .FirstViewContents{
     padding: 0 50px;
     max-width: 1140px;
@@ -156,9 +419,32 @@ nav ul li{
     position: relative;
 }
 
+@media screen and (max-width: 767px) {
+    .FirstView__container {
+        margin-top: -45vw;
+    }
+}
+
+/*FirstViewConteainerからFirstviewContents画像ズレる場合元に戻す*/
+@media screen and (max-width: 767px) {
+    .FirstViewContents {
+        max-width: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContents {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
 
 .FirstViewContent{
     margin-bottom: 70px;
+    width: fit-content;
 }
 
 .FirstViewItem{
@@ -167,8 +453,24 @@ nav ul li{
     vertical-align: middle;
 }
 
+@media screen and (max-width: 767px) {
+    .FirstViewItem {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+
 .FirstViewItem img{
     margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewItem img {
+        width: 27.5%;
+    }
 }
 
 .FirstViewItem img:last-of-type {
@@ -214,6 +516,55 @@ table {
     height: 64px;
     margin-bottom: 25px;
 }
+
+@media screen and (max-width: 767px) {
+    .FirstViewButtons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewButtons a:first-of-type {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FirstViewButtons a:hover {
+        opacity: .8;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FirstViewButtons a {
+        transition: opacity .2s;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewButtons a:last-of-type {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FirstViewButtons a:hover {
+        opacity: .8;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FirstViewButtons a {
+        transition: opacity .2s;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewButtons a {
+        width: 100% !important;
+        height: 64px !important;
+    }
+}
 .FirstViewButton{
     background-color: #f79214;
     color: #fff;
@@ -257,15 +608,48 @@ table {
  
 }
 
+@media screen and (max-width: 1024px) {
+    .AboutWrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .AboutWrapper {
+        max-width: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 .About{
     background-color: #f79214;
     padding: 44px 0px;
 
 }
 
+@media screen and (max-width: 767px) {
+    .About {
+        padding: 30px 0;
+    }
+}
+
 .AboutVideo{
     width: 50%;
     object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+    .AboutVideo {
+        margin-bottom: 16px;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .AboutVideo {
+        width: 100%;
+    }
 }
 
 .About_Title{
@@ -278,6 +662,20 @@ table {
     color: #fff;
 }
 
+@media screen and (max-width: 1024px) {
+    .About_Title {
+        margin-left: 0;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About_Title {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
 .About_Title h2 {
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     color: #fff;
@@ -287,11 +685,47 @@ table {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+    .About_Title h2 {
+        font-size: 33px;
+        line-height: 1.2;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .About_Title h2 {
+        font-size: 33px;
+        line-height: 1.4;
+        white-space: pre;
+        word-break: keep-all;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About_Title h2 span {
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .About_Title br {
+        display: block;
+    }
+}
+
 .About_Title p {
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
     margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .About_Title p {
+        font-size: 16px;
+        line-height: 21px;
+    }
 }
 
 .AboutTitleButton{
