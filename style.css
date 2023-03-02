@@ -20,7 +20,7 @@ time, mark, audio, video {
 }
 
 
-.html {
+.html{
     -webkit-text-size-adjust: 100%;
 }
 
@@ -28,20 +28,20 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-header nav{
+header{
     display: block;
 }
 
 /*PC縮小版*/
 @media screen and (max-width: 767px) {
-    .Header {
+    .HeaderLayout {
         padding-top: 15px;
         padding-bottom: 15px;
     }
 }
 
 @media screen and (max-width: 1080px) {
-    .Header {
+    .HeaderLayout {
         background-color: #fff;
         z-index: 10;
     }
@@ -119,10 +119,29 @@ header nav{
         background-color:#333;
         transform:translate(0,-50%);
         border-radius:10px;
-        transition:top .2s,transform .2s,opacity .3s
-        
+        transition:top .2s,transform .2s,opacity .3s}
+    }
+
+
+@media screen and (max-width: 1080px) {
+    .HeaderLists {
+        overflow-y: scroll;
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 100%;
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 75px;
+        transition: transform .5s;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, .8);
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
     }
 }
+
+
 
 @media screen and (max-width: 1080px) {
     main {
@@ -141,16 +160,21 @@ header nav{
     padding-bottom: 20px;
 }
 
-.HeaderLayout {
+.HeaderLayout{
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.HeaderContainer{
+    margin-left: 36px;
     display: flex;
     justify-content: space-between;
     margin: 0 36px;
     max-width: 100%;
     position: relative;
 }
-
-/*.HeaderContainer {margin-left: 36px;}:*/
-
 
 .HeaderContainer>*:last-child {
     display: inline-flex;
@@ -171,7 +195,7 @@ header nav{
 }
 
 
-.HeaderLists {
+.HeaderLists{
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -214,6 +238,7 @@ header nav{
 }
 
 .HeaderList{
+    font-family: 'Lato',sans-serif;
     text-decoration: none;
     font-weight: 700;
     word-break: break-all;
@@ -241,7 +266,7 @@ header nav{
 }
 
 @media screen and (min-width: 768px) {
-    .HeaderList{
+    .HeaderList {
         transition: opacity .2s;
     }
 }
@@ -249,7 +274,7 @@ header nav{
 .HeaderLogo {
     height: 20px;
     width: auto;
-    display:block;
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -264,18 +289,6 @@ header nav{
     }
 }
 
-
-@media screen and (max-width: 767px) {
-    .HeaderLogo {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .HeaderLogo_img__sp {
-        display: none;
-    }
-}
 
 @media screen and (max-width: 767px) {
     .HeaderLogo_img__sp{
@@ -411,7 +424,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-    .FirstView__container {
+    .FirstViewContents {
         margin-top: -45vw;
     }
 }
